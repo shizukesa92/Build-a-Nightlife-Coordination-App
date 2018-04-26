@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+
+#header {
+	min-width: 100vw;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	background-color: #E27222;
+	color: #DDC990;
+	#left {
+		width: 30%;
+	}
+	.btn-toolbar{
+		width: 20%;
+		margin-left: auto; // Floats it to left
+	}
+	font-size: 2vw;
+}
+
+#footer {
+	bottom: 0;
+	position: absolute;
+	width: 100vw;
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #E27222;
+	color: #DDC990;
+
+	b {
+		font-size: 1vw;
+	}
+}
+
