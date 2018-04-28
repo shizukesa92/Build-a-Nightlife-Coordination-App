@@ -1,0 +1,40 @@
+.nav-small-header {
+	display: flex !important;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.nav-small-header i.icon {
+	background-color: #4FD5C7;
+	font-size: 1.6rem;
+	margin-bottom: 14px;
+	box-shadow: 5px -10px 40px rgba(79, 213, 199, .6);
+	cursor: pointer;
+}
+
+.nav-small-root .pushable {
+	overflow: hidden;
+}
+
+.pushable .content-root {
+	height: calc(100vh - 100px);
+	overflow: auto;
+}
+
+.nav-small-root .sidebar {
+	margin-top: 10px !important;
+	overflow: hidden !important;
+	z-index: 1;
+}
+
+@media all and (max-width: 780px){
+	.nav-small-root {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 781px){
+	.nav-small-root {
+		display: none !important;
+	}
+}

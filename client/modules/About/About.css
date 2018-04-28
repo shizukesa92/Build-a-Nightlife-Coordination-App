@@ -1,0 +1,92 @@
+.about-root {
+	background: rgba(27, 28, 29, .6);
+	padding: 0px 10px 50px 10px ;
+}
+
+.about-root h1 {
+	padding-top: 40px !important;
+}
+
+
+.about-project {
+	opacity: 0;
+    animation: fadeInUp 1.5s 0.5s ease-out forwards;
+}
+
+.about-project-list .content {
+	font-weight: 300;
+}
+
+.about-project-list .header{
+	font-size: 1.2rem;
+    padding: 10px 0;
+    color: #4FD5C7 !important;
+}
+
+.about-project-list .content a.about-link {
+	text-decoration: underline;
+}
+
+.about-project-list .statistic {
+	margin-top: 0 !important;
+}
+
+.about-project-list .statistic .label {
+    font-size: 12px;
+}
+
+.about-author {
+	opacity: 0;
+    animation: fadeInUp 1.5s 1s ease-out forwards;
+}
+
+.about-author .header {
+	color: #4FD5C7 !important;
+	font-size: 1.2rem !important;
+	padding-top: 20px;
+}
+
+.about-author-icon, .about-author-link {
+	padding: 10px 0;
+	color: #fff !important;
+	font-weight: 300;
+}
+
+.about-author-link a {
+	margin-left: 5px;
+	color: #4FD5C7;
+}
+
+.about-author-link a:hover {
+	font-weight: 400;
+	transition: all 0.3s ease-in-out;
+}
+
+@media all and (min-width: 780px) and (max-width: 810px){
+	.about-author-icon-text{
+		display: block;
+		padding-bottom: 5px;
+	}
+}
+
+@media all and (max-width: 780px){
+	.about-root h1, .about-project-list .header, .about-project-list .content {
+		text-align: center;
+	}
+	.about-project-list .about-project-desc {
+		text-align: left;
+	}
+}
+
+@media all and (min-width: 768px) and (max-width: 780px){
+	.about-author .item {
+		padding-left: 100px !important;
+	}
+}
+
+@media all and (max-width: 767px){
+	.about-author .content {
+		text-align: center;
+	}
+	
+}

@@ -1,0 +1,66 @@
+.bg-decor-root {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -2;
+}
+
+.bg-decoration-1 {
+    width: 40vmax;
+    height: 70vmax;
+    border: 25px solid #5A46FB;
+    border-radius: 50%;
+    position: fixed;
+    right: -5%;
+    bottom: -40%;
+    transform: rotate(72deg);
+    box-shadow: 0px 0px 130px rgba(90, 70, 251, .6);
+    transition: all 0.15s ease-in-out;
+}
+
+.bg-decoration-2{
+    width: 70vmin;
+    height: 70vmin;
+    border: 20px solid #8B54F7;
+    border-radius: 50%;
+    position: fixed;
+    right: -30%;
+    top: -30%;
+    transform: rotate(15deg);
+    box-shadow: 0 0 110px rgba(139, 84, 247, .6);
+    transition: all 0.15s ease-in-out;
+}
+
+.bg-decoration-3 {
+    width: 100vmax;
+    height: 70vmax;
+    border: 15px solid #D7FF00;
+    border-radius: 50%;
+    position: fixed;
+    left: -45%;
+    bottom: -60%;
+    transform: rotate(2deg);
+    box-shadow: 0px 0px 60px rgba(215, 255, 0, .6);
+    transition: all 0.15s ease-in-out;
+}
+
+@media all and (min-width: 900px){
+    .bg-decoration-1 {
+        width: 50%;
+        height: 70%;
+        right: -15%;
+        bottom: -25%;
+    }
+    .bg-decoration-2 {
+        width: 50vmax;
+        height: 50vmax;
+        right: -35%;
+        bottom: -30%;
+    }
+    .bg-decoration-3 {
+        width: 100%;
+        height: 70%;
+        left: -45%;
+        bottom: -45%;
+    }
+}

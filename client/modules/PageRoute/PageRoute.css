@@ -1,0 +1,11 @@
+.content-root {
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+@media all and (max-width: 780px){
+	.content-root {
+		width: 100%;
+		top: 100px;
+	}
+}

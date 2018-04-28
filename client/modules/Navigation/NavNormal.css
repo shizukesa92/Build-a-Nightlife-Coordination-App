@@ -1,0 +1,46 @@
+.nav-normal-root {
+	width: 290px;
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 2rem !important;
+	padding-right: 1rem !important;
+	animation: fadeInLeft 1s ease-out forwards;
+}
+
+.nav-normal-root a.active {
+	border-color: #4FD5C7 !important;
+}
+
+.nav-normal-root a.active h3 {
+	color: #4FD5C7;
+}
+
+footer.footer-root {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: 100;
+	padding-left: 16px;
+	position: absolute;
+	bottom: 30px;
+}
+
+.footer-root a {
+	color: #fff;
+}
+
+.footer-root a:hover {
+	color: #4FD5C7;
+	font-weight: 400;
+}
+
+.divider {
+	margin: 0 5px;
+}
+
+@media all and (max-width: 780px){
+	.nav-normal-root {
+		display: none;
+	}
+}
+

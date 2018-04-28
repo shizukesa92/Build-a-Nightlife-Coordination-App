@@ -1,0 +1,58 @@
+.home-root {
+	text-align: right;
+    padding-top: 28vh;
+    padding-right: 15vw;
+    opacity: 0;
+    animation: fadeInUp 1.5s 0.5s ease-out forwards;
+}
+
+.home-root h1{
+	font-size: 3.8rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.home-root h5 {
+	font-size: 1.3rem;
+    margin: 12px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-root .button {
+	margin: 12px 0;
+	transition: all 0.3s ease-in-out;
+}
+
+@media all and (max-width: 960px) {
+	.home-root {
+	    padding-right: 50px;
+	}
+}
+
+@media all and (max-width: 780px) {
+	.home-root {
+		text-align: left;
+		padding-left: 50px;
+	    padding-right: 0px;
+	}
+}
+
+@media all and (max-width: 580px) {
+	.home-root {
+		text-align: center;
+		padding-top: 23vh;
+	    padding-left: 0;
+	}
+}
+
+@media all and (max-width: 480px) {
+	.home-root {
+		padding-top: 20vh;
+	}
+	.home-root h1{
+		font-size: 3rem;
+	}
+	.home-root h5 {
+		font-size: 1.1rem;
+	    margin: 12px 0;
+	}
+}

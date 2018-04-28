@@ -1,0 +1,66 @@
+.user-activities-root {
+	padding: 10vh 10px 10vh 10vw;
+	background: rgba(27, 28, 29, 0.4);
+}
+
+.user-activities-root h1 {
+	margin-bottom: 25px !important;
+}
+
+.user-activities-root .feed {
+	opacity: 0;
+    animation: fadeInUp 1.5s 0.5s ease-out forwards;
+}
+
+.user-activity {
+	padding: 7px 0 !important;
+}
+
+.user-activity .label i {
+	color: #4FD5C7 !important;
+	text-shadow: 0 0 40px rgba(79, 213, 199, .7);
+	margin-top: 3px;
+}
+
+.user-activity .content .date {
+	color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.user-activity .content a.user-activity-title {
+	font-size: 1.2rem !important;
+	color: #4FD5C7 !important;
+}
+
+.user-activity .content a.user-activity-title:hover {
+	text-decoration: underline;
+	transition: all 0.3s ease-in-out;
+}
+
+.user-activity .content .extra {
+	color: #fff !important;
+	margin: 10px 0 !important;
+}
+
+.user-activity .content a.like {
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 100;
+}
+
+.user-activity .content a.like:hover {
+	color: #4FD5C7;
+	transition: all 0.3s ease-in-out;
+}
+
+@media all and (max-width: 780px){
+	.user-activities-root {
+		padding: 7vh 10px 7vh 10vw;
+	}
+}
+
+@media all and (max-width: 540px){
+	.user-activities-root {
+		padding: 5vh 10px 5vh 10px;
+	}
+}
+
+
