@@ -1,10 +1,14 @@
 import React from 'react';
-import { Container, Header, Feed } from 'semantic-ui-react';
+import {
+	Container,
+	Header,
+	Feed
+} from 'semantic-ui-react';
 import Activity from './Activity';
 import './MyActivities.css';
 
 const MyActivities = (props) => {
-	if(props.token) {
+	if (props.token) {
 		return (
 			<Container className="user-activities-root">
 			  	<Header as='h1' inverted>Recent activities of {props.userInfo.username}</Header>
@@ -32,7 +36,29 @@ const MyActivities = (props) => {
 			</Container>
 		)
 	}
-  
+
 }
 
 export default MyActivities
+
+import React from 'react';
+import {
+	connect
+} from 'react-redux';
+import {
+	toggleAndUpdateRsvp
+} from '../../assets/action';
+import MyActivities from './MyActivities';
+
+const mapStateToProps = state => ({
+	userInfo: state.account.userInfo,
+	token: state.account.token
+})
+
+const mapDispatchToProps = dispatch => ({
+	toggleRsvpAction: (id, info) => dispatch(toggleAndUpdateRsvp(id, info))
+})
+
+const MyActivitiesContainer = connect(mapStateToProps, mapDispatchToProps)(MyActivities);
+
+export default MyActivitiesContainer

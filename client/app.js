@@ -10,7 +10,7 @@
 		NavSmall,
 		PageRoute,
 		BgDecor
-	} from './components';
+	} from './components'; //https://stackoverflow.com/questions/5364928/node-js-require-all-files-in-a-folder?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 	import './App.css';
 
 	const AppRoot = (props) => (

@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Button } from 'semantic-ui-react';
+import {
+	Header,
+	Button
+} from 'semantic-ui-react';
 import AccountForm from './AccountForm';
 import './Account.css';
 
@@ -8,7 +11,7 @@ const Account = (props) => {
 	let actionType = props.match.params.actionType;
 	let isLogin = !!props.token;
 	let displayType = actionType[0].toUpperCase() + actionType.slice(1);
-	if(actionType === 'logout') {
+	if (actionType === 'logout') {
 		return (
 			<div className="account-root">
 				<Header as="h1" inverted color='teal'>{displayType}</Header>
@@ -53,3 +56,39 @@ Account.PropTypes = {
 };
 
 export default Account;
+
+import {
+	connect
+} from 'react-redux';
+import {
+	withRouter
+} from 'react-router-dom'
+import {
+	changeActionType,
+	submitAccountRequest
+} from '../../assets/action';
+import Account from './Account';
+
+const mapStateToProps = state => ({
+	...state.account
+})
+
+const mapDispatchToProps = dispatch => ({
+	switchActionType: () => dispatch(changeActionType()),
+	submitAccountInfo: ({
+		username,
+		password,
+		actionType
+	}) => dispatch(submitAccountRequest({
+		username,
+		password,
+		actionType
+	}))
+})
+
+const AccountContainer = withRouter(connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Account));
+
+export default AccountContainer

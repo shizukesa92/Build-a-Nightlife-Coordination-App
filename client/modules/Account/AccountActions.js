@@ -1,12 +1,3 @@
-import {
-	store
-} from '../index';
-import {
-	getSearchList,
-	updateRsvps,
-	sendAccountRequest
-} from './client';
-
 // account actions
 export const changeActionType = () => ({
 	type: 'CHANGE_ACTION_TYPE'
@@ -103,33 +94,60 @@ export const toggleAndUpdateRsvp = (id, info) => {
 	}
 }
 
-// search actions
-const searchRequest = (city, sortBy) => ({
-	type: 'SEARCH_REQUEST',
-	city,
-	sortBy
-})
-
-const searchSuccess = searchList => ({
-	type: 'SEARCH_SUCCESS',
-	searchList
-})
-
-const searchFailure = error => ({
-	type: 'SEARCH_FAILURE',
-	error
-})
-
-export const fetchSearchList = (city, sortBy) => {
+export const submitAccountRequest = ({
+	username,
+	password,
+	actionType
+}) => {
 	return dispatch => {
-		dispatch(searchRequest(city, sortBy));
-		getSearchList(city, sortBy)
-			.then(searchResult => {
-				if (searchResult.error) {
-					dispatch(searchFailure(searchResult.error.description));
+		dispatch(accountRequest({
+			username,
+			password,
+			actionType
+		}));
+		sendAccountRequest({
+				username,
+				password,
+				actionType
+			})
+			.then(accountResp => {
+				if (accountResp.error) {
+					dispatch(accountRequestFailure({
+						errorMsg: accountResp.error,
+						actionType
+					}));
 				} else {
-					dispatch(searchSuccess(searchResult.businesses));
+					let {
+						userInfo,
+						token
+					} = accountResp;
+					userInfo = userInfo || {};
+					token = token || '';
+					dispatch(accountRequestSuccess({
+						userInfo,
+						token,
+						actionType
+					}));
 				}
 			})
 	}
 }
+
+export const sendAccountRequest = ({
+	username,
+	password,
+	actionType
+}) => (
+	fetch('/account', {
+		method: 'post',
+		body: JSON.stringify({
+			username,
+			password,
+			actionType
+		}),
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		}
+	}).then(res => res.json())
+)

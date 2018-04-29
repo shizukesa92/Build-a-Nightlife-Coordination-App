@@ -6,4 +6,16 @@ import reduxThunk from "redux-thunk";
 
 import reducers from "./reducers";
 
-export const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+
+
+let persistentState = {
+	account: undefined,
+	search: undefined
+};
+if (localStorage.cityNightAccount) {
+	persistentState = {
+		account: JSON.parse(localStorage.cityNightAccount),
+		search: undefined
+	};
+}
+export const store = createStore(reducers, persistentState, applyMiddleware(thunkMiddleware));

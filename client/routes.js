@@ -1,32 +1,28 @@
-import React from "react";
+import React from 'react';
 import {
 	Route,
-	Redirect,
 	Switch
-} from "react-router-dom";
-import Gateway from "./modules/App/Gateway";
-import Landing from "./modules/App/Landing";
-import Poll from "./modules/Vote/Poll";
-import PollNew from "./modules/Vote/PollNew";
-import ProtectedRoute from "./modules/App/ProtectedRoute";
+} from 'react-router-dom';
+import {
+	Home,
+	About,
+	SearchContainer,
+	MyActivitiesContainer,
+	AccountContainer,
+	PageNotFound
+} from '../index';
 
-export default (
-	<Switch>
-                <Route exact path="/" component={Landing} />
-                <Route exact path="/login" component={Gateway} />
-                <Route exact path="/new_user" component={Gateway} />
-                <Route exact path="/poll/:pollId/" component={Poll} />
-                <ProtectedRoute
-                  exact
-                  path="/my_polls"
-                  auth={this.props.auth}
-                  component={Landing}
-                />
-                <ProtectedRoute
-                  exact
-                  path="/new_poll"
-                  auth={this.props.auth}
-                  component={PollNew}
-                />
-                <Redirect to="/" />
-              </Switch>);
+const PageRoute = (props) => (
+	<div className="content-root">
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/search" component={SearchContainer} />
+      <Route path="/user" component={MyActivitiesContainer} />
+      <Route path="/:actionType(signup|login|logout)" component={AccountContainer} />
+      <Route component={PageNotFound} />
+    </Switch>
+  </div>
+)
+
+export default PageRoute;
