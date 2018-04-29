@@ -33,117 +33,78 @@
 	}
 }
 
-.about-root {
-	background: rgba(27, 28, 29, .6);
-	padding: 0px 10px 50px 10px ;
-}
-
-.about-root h1 {
-	padding-top: 40px !important;
-}
-
-
-.about-project {
+.home-root {
+	text-align: right;
+	padding-top: 28vh;
+	padding-right: 15vw;
 	opacity: 0;
 	animation: fadeInUp 1.5s 0.5s ease-out forwards;
 }
 
-.about-project-list .content {
-	font-weight: 300;
+.home-root h1{
+	font-size: 3.8rem;
+	transition: all 0.3s ease-in-out;
 }
 
-.about-project-list .header{
-	font-size: 1.2rem;
-	padding: 10px 0;
-	color: #4FD5C7 !important;
+.home-root h5 {
+	font-size: 1.3rem;
+	margin: 12px 0;
+	transition: all 0.3s ease-in-out;
 }
 
-.about-project-list .content a.about-link {
-	text-decoration: underline;
+.home-root .button {
+	margin: 12px 0;
+	transition: all 0.3s ease-in-out;
 }
 
-.about-project-list .statistic {
-	margin-top: 0 !important;
-}
-
-.about-project-list .statistic .label {
-	font-size: 12px;
-}
-
-.about-author {
+.home-root {
+	text-align: right;
+	padding-top: 28vh;
+	padding-right: 15vw;
 	opacity: 0;
-	animation: fadeInUp 1.5s 1s ease-out forwards;
+	animation: fadeInUp 1.5s 0.5s ease-out forwards;
 }
 
-.about-author .header {
-	color: #4FD5C7 !important;
-	font-size: 1.2rem !important;
-	padding-top: 20px;
+.home-root h1{
+	font-size: 3.8rem;
+	transition: all 0.3s ease-in-out;
 }
 
-.about-author-icon, .about-author-link {
-	padding: 10px 0;
-	color: #fff !important;
-	font-weight: 300;
+.home-root h5 {
+	font-size: 1.3rem;
+	margin: 12px 0;
+	transition: all 0.3s ease-in-out;
 }
 
-.about-author-link a {
-	margin-left: 5px;
+.home-root .button {
+	margin: 12px 0;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.pushable .content-root {
+	height: calc(100vh - 100px);
+	overflow: auto;
+}
+
+
+.nav-normal-root {
+	width: 290px;
+	height: 100vh;
+	box-sizing: border-box;
+	padding: 2rem !important;
+	padding-right: 1rem !important;
+	animation: fadeInLeft 1s ease-out forwards;
+}
+
+.nav-normal-root a.active {
+	border-color: #4FD5C7 !important;
+}
+
+.nav-normal-root a.active h3 {
 	color: #4FD5C7;
 }
 
-.about-author-link a:hover {
-	font-weight: 400;
-	transition: all 0.3s ease-in-out;
-}
-
-.home-root {
-	text-align: right;
-	padding-top: 28vh;
-	padding-right: 15vw;
-	opacity: 0;
-	animation: fadeInUp 1.5s 0.5s ease-out forwards;
-}
-
-.home-root h1{
-	font-size: 3.8rem;
-	transition: all 0.3s ease-in-out;
-}
-
-.home-root h5 {
-	font-size: 1.3rem;
-	margin: 12px 0;
-	transition: all 0.3s ease-in-out;
-}
-
-.home-root .button {
-	margin: 12px 0;
-	transition: all 0.3s ease-in-out;
-}
-
-.home-root {
-	text-align: right;
-	padding-top: 28vh;
-	padding-right: 15vw;
-	opacity: 0;
-	animation: fadeInUp 1.5s 0.5s ease-out forwards;
-}
-
-.home-root h1{
-	font-size: 3.8rem;
-	transition: all 0.3s ease-in-out;
-}
-
-.home-root h5 {
-	font-size: 1.3rem;
-	margin: 12px 0;
-	transition: all 0.3s ease-in-out;
-}
-
-.home-root .button {
-	margin: 12px 0;
-	transition: all 0.3s ease-in-out;
-}
 
 
 

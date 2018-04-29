@@ -4,10 +4,22 @@ import {
 	Header,
 	Feed
 } from 'semantic-ui-react';
-import Activity from './Activity';
 import './MyActivities.css';
-
-const MyActivities = (props) => {
+const ActivityList = (props) => (
+	<Feed.Event className="user-activity">
+      <Feed.Label icon="heart" />
+      <Feed.Content>
+        <Feed.Summary className="user-activity-title"
+          as="a" href={props.info.url} content={props.info.name} date={props.date} />
+        <Feed.Extra>
+          <div>location: {props.info.location.city}</div>
+          <div>phone: {props.info.phone}</div>
+        </Feed.Extra>
+        <Feed.Like icon="trash" content="Cancel RSVP" onClick={() => props.toggleRsvpAction(props.id, props.info)} />
+      </Feed.Content>
+    </Feed.Event>
+)
+const Activities = (props) => {
 	if (props.token) {
 		return (
 			<Container className="user-activities-root">
@@ -17,7 +29,7 @@ const MyActivities = (props) => {
 			  		? <Feed>
 			  			{
 			  				props.userInfo.rsvps.map(rsvp => 
-			  					<Activity 
+			  					<ActivityList 
 			  						key={rsvp.date + rsvp.id} 
 			  						id={rsvp.id} 
 			  						info={rsvp.info} 
@@ -39,7 +51,7 @@ const MyActivities = (props) => {
 
 }
 
-export default MyActivities
+export default Activities
 
 import React from 'react';
 import {
@@ -61,4 +73,4 @@ const mapDispatchToProps = dispatch => ({
 
 const MyActivitiesContainer = connect(mapStateToProps, mapDispatchToProps)(MyActivities);
 
-export default MyActivitiesContainer
+export default ActivitiesContainer

@@ -4,25 +4,25 @@ import {
 	Switch
 } from 'react-router-dom';
 import {
-	Home,
-	About,
-	SearchContainer,
-	MyActivitiesContainer,
-	AccountContainer,
-	PageNotFound
-} from '../index';
+	Home
+} from "./components/Home";
+import {
+	Search
+} from "./modules/Search/Search.js";
+import {
+	Activities
+} from "./modules/Activities/MyActivities";
+import {
+	Account
+} from "./modules/Account/Account.js";
 
-const PageRoute = (props) => (
-	<div className="content-root">
+export const Routes = (props) => (
+	<div id = "content">
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/search" component={SearchContainer} />
-      <Route path="/user" component={MyActivitiesContainer} />
-      <Route path="/:actionType(signup|login|logout)" component={AccountContainer} />
-      <Route component={PageNotFound} />
+      <Route path="/search" component={Search} />
+      <Route path="/user" component={MyActivities} />
+      <Route path="/:actionType(signup|login|logout)" component={Account} />
     </Switch>
   </div>
 )
-
-export default PageRoute;

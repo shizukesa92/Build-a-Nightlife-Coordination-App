@@ -1,50 +1,51 @@
 .search-root {
-	padding-right: 50px;
-	text-align: center;
+    padding-right: 50px;
+    text-align: center;
 }
 
 .search-bar {
-	text-align: center;
+    text-align: center;
 }
 
 .search-bar.top {
-	padding: 5vh 0;
+    padding: 5vh 0;
 }
 
 .search-bar.middle {
-	padding: 35vh 0;
+    padding: 35vh 0;
 }
 
-.search-bar-header{
-	font-family: 'Advent Pro', sans-serif !important;
-	font-size: 1.6rem !important;
+.search-bar-header {
+    font-family: 'Advent Pro', sans-serif !important;
+    font-size: 1.6rem !important;
 }
 
 .search-bar-input {
-	max-width: 455px;
-	margin: 0 auto;
-	border-bottom: 2px solid #6DFFFF;
-	display: flex;
-	justify-content: space-between;
+    max-width: 455px;
+    margin: 0 auto;
+    border-bottom: 2px solid #6DFFFF;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-bar-input>div.input {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 
-.search-bar-input input, .search-bar div.dropdown {
-	background: transparent !important;
-	color: #6DFFFF !important;
-	font-size: 1.2rem;
-	font-weight: 300;
+.search-bar-input input,
+.search-bar div.dropdown {
+    background: transparent !important;
+    color: #6DFFFF !important;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
 .search-bar-dropdown {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .search-bar-dropdown .text {
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .search-bar-dropdown div.menu {
@@ -54,29 +55,114 @@
 }
 
 .search-error {
-	margin-top: 30px;
-	color: red;
+    margin-top: 30px;
+    color: red;
 }
 
 .search-result {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	margin-bottom: 50px !important;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px !important;
 }
 
-@media all and (max-width: 780px){
-	.search-root {
-		padding-right: 0px;
-	}
-	.search-bar.middle {
-		padding: 25vh 0;
-	}
+.search-result-item {
+    box-shadow: none !important;
+    background: rgba(27, 28, 29, 0.8) !important;
+    border-bottom: 2px solid #6DFFFF !important;
+    color: #fff !important;
+    margin: 20px 10px !important;
+    text-align: left;
+    opacity: 0;
+    transition: all 0.3s ease-in-out !important;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-@media all and (max-width: 420px){
-	.search-bar-input div.dropdown div.text {
-		display: none;
-	}
+.search-result-image {
+    width: 100%;
+    height: 125px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+a.search-result-title,
+.search-result-item .meta,
+#search-result-info .statistic div {
+    color: #fff !important;
+    font-weight: 100;
+}
+
+a.search-result-title {
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    font-weight: 400 !important;
+    margin-bottom: 10px;
+}
+
+a.search-result-title:hover {
+    color: #6DFFFF;
+}
+
+#search-result-rating div {
+    text-shadow: none !important;
+}
+
+.ui.star.rating .icon {
+    color: #000;
+}
+
+#search-result-info {
+    display: flex;
+    justify-content: space-start;
+    margin: 10px 0 0 0 !important;
+}
+
+#search-result-info .statistic {
+    margin: 0 20px 0 0 !important;
+}
+
+#search-result-info .statistic div.value {
+    font-size: 1rem !important;
+}
+
+#search-result-info .statistic div.label {
+    font-weight: 400 !important;
+    font-size: 0.7rem !important;
+}
+
+.search-result-action.extra.content {
+    border-top: 1px solid rgba(109, 255, 255, 0.2) !important;
+    cursor: pointer;
+}
+
+.search-result-action.extra.content:hover {
+    background: #6DFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-result-action.extra.content:hover .search-result-action-content {
+    color: #1B1C1D !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-result-action-content {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #6DFFFF !important;
+}
+
+.search-result-action.extra.content.rsvp {
+    background: #6DFFFF;
+}
+
+.search-result-action.rsvp .search-result-action-content {
+    color: #1B1C1D !important;
+}
+
+.search-result-action.rsvp .search-result-action-content i {
+    color: red !important;
 }
