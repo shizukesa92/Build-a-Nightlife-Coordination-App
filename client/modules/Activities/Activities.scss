@@ -9,7 +9,7 @@
 
 .user-activities-root .feed {
 	opacity: 0;
-    animation: fadeInUp 1.5s 0.5s ease-out forwards;
+	animation: fadeInUp 1.5s 0.5s ease-out forwards;
 }
 
 .user-activity {
@@ -50,17 +50,4 @@
 	color: #4FD5C7;
 	transition: all 0.3s ease-in-out;
 }
-
-@media all and (max-width: 780px){
-	.user-activities-root {
-		padding: 7vh 10px 7vh 10vw;
-	}
-}
-
-@media all and (max-width: 540px){
-	.user-activities-root {
-		padding: 5vh 10px 5vh 10px;
-	}
-}
-
 

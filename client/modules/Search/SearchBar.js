@@ -1,29 +1,55 @@
 import React from 'react';
-import { Header, Input, Dropdown } from 'semantic-ui-react'
-import './Search.css';
+import {
+	Header,
+	Input,
+	Dropdown
+} from 'semantic-ui-react'
 
-const dropdownOptions = [
-	  { key: 1, text: 'sort by > rating', value: 'rating' },
-	  { key: 2, text: 'sort by > review count', value: 'review_count' },
-	  { key: 3, text: 'sort by > distance', value: 'distance' },
-	];
+const dropdownOptions = [{
+		key: 1,
+		text: 'sort by > rating',
+		value: 'rating'
+	},
+	{
+		key: 2,
+		text: 'sort by > review count',
+		value: 'review_count'
+	},
+	{
+		key: 3,
+		text: 'sort by > distance',
+		value: 'distance'
+	},
+];
 
-class SearchBar extends React.Component{
+export default class SearchBar extends React.Component {
 	state = {
 		city: this.props.city,
 		sortBy: this.props.sortBy
 	}
-	componentWillReceiveProps(nextProps){
-		this.setState({ city: nextProps.city, sortBy: nextProps.sortBy })
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			city: nextProps.city,
+			sortBy: nextProps.sortBy
+		})
 	}
-	handleInputChange = e => this.setState({ city: e.target.value})
-	handleDropdownChange = (e, {value}) => this.setState({ sortBy: value })
+	handleInputChange = e => this.setState({
+		city: e.target.value
+	})
+	handleDropdownChange = (e, {
+		value
+	}) => this.setState({
+		sortBy: value
+	})
 	handleSearchSubmit = e => {
 		e.preventDefault();
-		let {city, sortBy} = this.state;
+		let {
+			city,
+			sortBy
+		} = this.state;
 		this.props.getSearchList(city, sortBy);
 	}
-	render(){
+	render() {
 		return (
 			<div className={this.props.withSearchResult ? 'search-bar top' : 'search-bar middle'}>
 				<Header 
@@ -46,5 +72,3 @@ class SearchBar extends React.Component{
 		)
 	}
 }
-
-export default SearchBar;

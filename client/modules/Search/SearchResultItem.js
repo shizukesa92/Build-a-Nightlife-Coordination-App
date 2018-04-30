@@ -1,15 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Card, Icon, Rating, Statistic } from 'semantic-ui-react';
-import './SearchResultItem.css';
+import {
+	Link
+} from 'react-router-dom';
+import {
+	Card,
+	Icon,
+	Rating,
+	Statistic
+} from 'semantic-ui-react';
 
-const SearchResultItem = (props) => {
-	const searchResultInfo = [
-	  { label: 'Price', value: props.searchItem.price },
-	  { label: 'Distance', value: Math.round(props.searchItem.distance) + 'm' },
+export const SearchResultItem = (props) => {
+	const searchResultInfo = [{
+			label: 'Price',
+			value: props.searchItem.price
+		},
+		{
+			label: 'Distance',
+			value: Math.round(props.searchItem.distance) + 'm'
+		},
 	]
 	return (
-        <Card color='teal' className="search-result-item">
+		<Card color='teal' className="search-result-item">
         	<a className="search-result-image" href={props.searchItem.url}
         		style={{backgroundImage: `url(${props.searchItem.image_url})`}} />
         	<Card.Content>
@@ -45,5 +56,3 @@ const SearchResultItem = (props) => {
         </Card>
 	)
 }
-
-export default SearchResultItem;

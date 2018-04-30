@@ -1,9 +1,15 @@
 import React from 'react';
-import { Form, Icon, Container, Header, Message, Button } from 'semantic-ui-react';
+import {
+	Form,
+	Icon,
+	Container,
+	Header,
+	Message,
+	Button
+} from 'semantic-ui-react';
 import InputField from './InputField';
-import './Account.css';
 
-class AccountForm extends React.Component{
+class AccountForm extends React.Component {
 	state = {
 		inputFields: {
 			username: this.props.userInput.username,
@@ -14,57 +20,93 @@ class AccountForm extends React.Component{
 			password: ''
 		}
 	}
-	componentWillReceiveProps(nextProps){
+	componentWillReceiveProps(nextProps) {
 		this.setState({
-			inputFields: { 
+			inputFields: {
 				username: nextProps.userInput.username,
-				password: nextProps.userInput.password 
+				password: nextProps.userInput.password
 			},
-			errors: { username: '', password: '' }
+			errors: {
+				username: '',
+				password: ''
+			}
 		});
-		if(nextProps.actionType !== this.props.actionType){
+		if (nextProps.actionType !== this.props.actionType) {
 			this.props.switchActionType();
 		}
 	}
-	onInputChange = ({ name, value, error }) => {
-		let { inputFields, errors } = this.state;
+	onInputChange = ({
+		name,
+		value,
+		error
+	}) => {
+		let {
+			inputFields,
+			errors
+		} = this.state;
 		inputFields[name] = value;
 		errors[name] = error;
-		this.setState({ inputFields, errors });
+		this.setState({
+			inputFields,
+			errors
+		});
 	}
 	validateForm = () => {
-		let { inputFields, errors } = this.state;
+		let {
+			inputFields,
+			errors
+		} = this.state;
 		let isNotValid = false;
-		if(inputFields.username === '') {
+		if (inputFields.username === '') {
 			errors.username = 'Username is a required field'
-			this.setState({ errors });
+			this.setState({
+				errors
+			});
 			isNotValid = true;
 		}
-		if(inputFields.password === '') {
+		if (inputFields.password === '') {
 			errors.password = 'Password is a required field'
-			this.setState({ errors });
+			this.setState({
+				errors
+			});
 			isNotValid = true;
 		}
-		if(errors.username || errors.password) {
+		if (errors.username || errors.password) {
 			isNotValid = true;
 		}
 		return isNotValid;
 	}
 	validateField = (value, name) => {
-		if(value.length < 6) {
+		if (value.length < 6) {
 			return name + ' needs to have at least 6 characters'
 		} else {
 			return false
 		}
 	}
- 	handleFormSubmit = () => {
- 		if(this.validateForm()) return;
- 		let {username, password} = this.state.inputFields;
- 		let {actionType} = this.props;
- 		this.props.submitAccountInfo({username, password, actionType});
+	handleFormSubmit = () => {
+		if (this.validateForm()) return;
+		let {
+			username,
+			password
+		} = this.state.inputFields;
+		let {
+			actionType
+		} = this.props;
+		this.props.submitAccountInfo({
+			username,
+			password,
+			actionType
+		});
 	}
-	render(){
-		let { actionType, isLogin, userInfo, loading, submitionStatus, errorMsg } = this.props;
+	render() {
+		let {
+			actionType,
+			isLogin,
+			userInfo,
+			loading,
+			submitionStatus,
+			errorMsg
+		} = this.props;
 		let displayType = actionType[0].toUpperCase() + actionType.slice(1);
 		return (
 			<Form as={Container} inverted
@@ -114,6 +156,6 @@ class AccountForm extends React.Component{
 			</Form>
 		)
 	}
-} 
+}
 
 export default AccountForm;

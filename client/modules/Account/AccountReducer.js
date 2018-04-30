@@ -1,3 +1,11 @@
+import {
+	changeActionType,
+	accountRequestSuccess,
+	accountRequestFailure,
+	accountRequest,
+	toggleRsvp
+} from "./AccountActions";
+
 let initialState = {
 	account: {
 		userInput: {
@@ -25,7 +33,7 @@ let initialState = {
 
 
 
-const account = (state = initialState.account, action) => {
+export const account = (state = initialState.account, action) => {
 	switch (action.type) {
 		case 'CHANGE_ACTION_TYPE':
 			return {
@@ -75,10 +83,8 @@ const account = (state = initialState.account, action) => {
 			let info = action.info;
 			let index = userInfo.rsvps.findIndex(rsvp => rsvp.id === id && rsvp.date === todayStr);
 			if (index !== -1) {
-				// remove rsvp
 				userInfo.rsvps = [...userInfo.rsvps.slice(0, index), ...userInfo.rsvps.slice(index + 1)];
 			} else {
-				// add rsvp
 				let newRsvp = {
 					date: todayStr,
 					id,

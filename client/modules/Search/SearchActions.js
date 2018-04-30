@@ -1,16 +1,15 @@
-// search actions
-const searchRequest = (city, sortBy) => ({
+export const searchRequest = (city, sortBy) => ({
 	type: 'SEARCH_REQUEST',
 	city,
 	sortBy
 })
 
-const searchSuccess = searchList => ({
+export const searchSuccess = searchList => ({
 	type: 'SEARCH_SUCCESS',
 	searchList
 })
 
-const searchFailure = error => ({
+export const searchFailure = error => ({
 	type: 'SEARCH_FAILURE',
 	error
 })

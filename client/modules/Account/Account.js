@@ -5,9 +5,18 @@ import {
 	Button
 } from 'semantic-ui-react';
 import AccountForm from './AccountForm';
-import './Account.css';
+import {
+	connect
+} from 'react-redux';
+import {
+	withRouter
+} from 'react-router-dom'
+import {
+	changeActionType,
+	submitAccountRequest
+} from './AccountActions';
 
-const Account = (props) => {
+export const Account = (props) => {
 	let actionType = props.match.params.actionType;
 	let isLogin = !!props.token;
 	let displayType = actionType[0].toUpperCase() + actionType.slice(1);
@@ -55,19 +64,8 @@ Account.PropTypes = {
 	submitAccountInfo: PropTypes.func
 };
 
-export default Account;
 
-import {
-	connect
-} from 'react-redux';
-import {
-	withRouter
-} from 'react-router-dom'
-import {
-	changeActionType,
-	submitAccountRequest
-} from '../../assets/action';
-import Account from './Account';
+
 
 const mapStateToProps = state => ({
 	...state.account
@@ -90,5 +88,3 @@ const AccountContainer = withRouter(connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Account));
-
-export default AccountContainer

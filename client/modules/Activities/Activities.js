@@ -4,7 +4,13 @@ import {
 	Header,
 	Feed
 } from 'semantic-ui-react';
-import './MyActivities.css';
+import {
+	connect
+} from 'react-redux';
+import {
+	toggleAndUpdateRsvp
+} from './ActivityActions';
+
 const ActivityList = (props) => (
 	<Feed.Event className="user-activity">
       <Feed.Label icon="heart" />
@@ -19,7 +25,8 @@ const ActivityList = (props) => (
       </Feed.Content>
     </Feed.Event>
 )
-const Activities = (props) => {
+
+export const Activities = (props) => {
 	if (props.token) {
 		return (
 			<Container className="user-activities-root">
@@ -51,17 +58,6 @@ const Activities = (props) => {
 
 }
 
-export default Activities
-
-import React from 'react';
-import {
-	connect
-} from 'react-redux';
-import {
-	toggleAndUpdateRsvp
-} from '../../assets/action';
-import MyActivities from './MyActivities';
-
 const mapStateToProps = state => ({
 	userInfo: state.account.userInfo,
 	token: state.account.token
@@ -71,6 +67,4 @@ const mapDispatchToProps = dispatch => ({
 	toggleRsvpAction: (id, info) => dispatch(toggleAndUpdateRsvp(id, info))
 })
 
-const MyActivitiesContainer = connect(mapStateToProps, mapDispatchToProps)(MyActivities);
-
-export default ActivitiesContainer
+export default connect(mapStateToProps, mapDispatchToProps)(Activities);

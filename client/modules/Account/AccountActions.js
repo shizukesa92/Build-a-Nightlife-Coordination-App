@@ -1,9 +1,8 @@
-// account actions
 export const changeActionType = () => ({
 	type: 'CHANGE_ACTION_TYPE'
 })
 
-const accountRequest = ({
+export const accountRequest = ({
 	username,
 	password,
 	actionType
@@ -14,7 +13,7 @@ const accountRequest = ({
 	actionType
 })
 
-const accountRequestSuccess = ({
+export const accountRequestSuccess = ({
 	userInfo,
 	token,
 	actionType
@@ -25,7 +24,7 @@ const accountRequestSuccess = ({
 	actionType
 })
 
-const accountRequestFailure = ({
+export const accountRequestFailure = ({
 	errorMsg,
 	actionType
 }) => ({
@@ -73,65 +72,11 @@ export const submitAccountRequest = ({
 	}
 }
 
-// update rsvps
-const toggleRsvp = (id, info) => ({
+export const toggleRsvp = (id, info) => ({
 	type: 'TOGGLE_RSVP',
 	id,
 	info
 })
-
-export const toggleAndUpdateRsvp = (id, info) => {
-	return dispatch => {
-		dispatch(toggleRsvp(id, info));
-
-		let state = store.getState();
-		let {
-			username,
-			rsvps
-		} = state.account.userInfo;
-		let token = state.account.token;
-		updateRsvps(username, token, rsvps);
-	}
-}
-
-export const submitAccountRequest = ({
-	username,
-	password,
-	actionType
-}) => {
-	return dispatch => {
-		dispatch(accountRequest({
-			username,
-			password,
-			actionType
-		}));
-		sendAccountRequest({
-				username,
-				password,
-				actionType
-			})
-			.then(accountResp => {
-				if (accountResp.error) {
-					dispatch(accountRequestFailure({
-						errorMsg: accountResp.error,
-						actionType
-					}));
-				} else {
-					let {
-						userInfo,
-						token
-					} = accountResp;
-					userInfo = userInfo || {};
-					token = token || '';
-					dispatch(accountRequestSuccess({
-						userInfo,
-						token,
-						actionType
-					}));
-				}
-			})
-	}
-}
 
 export const sendAccountRequest = ({
 	username,

@@ -1,13 +1,15 @@
 import {
 	combineReducers
 } from 'redux';
+
 import {
-	parseTime
-} from './helper';
+	account
+} from "./modules/Account/AccountReducer";
+import {
+	search
+} from "./modules/Search/SearchReducer";
 
-
-
-export const reducer = combineReducers({
+export const reducers = combineReducers({
 	account,
 	search
 });

@@ -2,16 +2,17 @@ import {
 	createStore,
 	applyMiddleware
 } from "redux";
-import reduxThunk from "redux-thunk";
+import thunkMiddleware from "redux-thunk";
 
-import reducers from "./reducers";
-
-
+import {
+	reducers
+} from "./reducers";
 
 let persistentState = {
 	account: undefined,
 	search: undefined
 };
+
 if (localStorage.cityNightAccount) {
 	persistentState = {
 		account: JSON.parse(localStorage.cityNightAccount),

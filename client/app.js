@@ -14,12 +14,15 @@
 
 	require('./main.scss');
 	require("./components/Components.scss");
+	require("./modules/Account/Account.scss");
+	require("./modules/Activities/Activities.scss");
+	require("./modules/Search/Search.scss");
 
 	const App = (props) => (
 		<BrowserRouter>
     <div id="wrapper">
       <Header token={props.account.token} currentPath={window.location.pathname.slice(1)} />
-		  {Routes}
+	  <Routes />
 	  <Footer />
     </div>
   </BrowserRouter>

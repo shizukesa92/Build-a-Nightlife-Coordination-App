@@ -1,9 +1,12 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react'
-import SearchResultItem from './SearchResultItem';
-import './Search.css';
+import {
+	Grid
+} from 'semantic-ui-react'
+import {
+	SearchResultItem
+} from './SearchResultItem';
 
-const SearchResult = (props) => {
+export const SearchResult = (props) => {
 	return (
 		<Grid className="search-result" >
 	      {
@@ -18,5 +21,3 @@ const SearchResult = (props) => {
 	    </Grid>
 	)
 }
-
-export default SearchResult;

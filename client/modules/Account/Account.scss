@@ -1,6 +1,6 @@
 .account-root {
-    padding: 15vh 10vw;	
-    animation: fadeInUp 1s ease-out forwards;
+	padding: 15vh 10vw;
+	animation: fadeInUp 1s ease-out forwards;
 }
 
 .account-root h1{
@@ -12,10 +12,10 @@
 }
 
 .account-msg-loading, .account-msg-success, .account-msg-error{
-    margin-top: 30px !important;
-    color: #fff !important;
+	margin-top: 30px !important;
+	color: #fff !important;
 	transition: all 0.3s ease-in-out;
-} 	
+}
 
 .account-msg-loading {
 	background-color: #F2711C !important;
@@ -44,26 +44,3 @@
 	transition: all 0.3s ease-in-out;
 }
 
-@media all and (min-width: 1000px){
-	.account-root {
-	    padding: 15vh 15vw;	
-	}
-}
-
-@media all and (min-width: 1200px){
-	.account-root {
-	    padding: 15vh 20vw;	
-	}
-}
-
-@media all and (max-width: 480px){
-	.account-root {
-	    padding: 15vh 5vw;	
-	}
-}
-
-@media all and (max-width: 400px){
-	.account-root {
-	    padding: 15vh 0;	
-	}
-}

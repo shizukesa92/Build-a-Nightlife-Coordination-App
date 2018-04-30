@@ -1,9 +1,3 @@
-const toggleRsvp = (id, info) => ({
-	type: 'TOGGLE_RSVP',
-	id,
-	info
-})
-
 export const updateRsvps = (username, token, rsvps) => (
 	fetch('/rsvps', {
 		method: 'put',
