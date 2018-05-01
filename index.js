@@ -1,13 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
-const passport = require('passport');
 const bodyParser = require('body-parser');
 const path = require('path');
-const fetch = require('node-fetch');
-
-const yelpBasePath = "https://api.yelp.com/v3/businesses/search?categories=nightlife";
 const app = express();
+const passport = require('passport');
 
 const cookieKey = process.env.COOKIE_KEY;
 app.use(
@@ -24,9 +21,7 @@ const dotenv = require("dotenv").config({
 const uri = process.env.MONGOLAB_URI;
 mongoose.connect(uri);
 
-const authenticate = require('./server/controllers/authenticate');
-const verify = require('./server/controllers/verify');
-const Users = require('./models/users');
+
 
 
 app.use(bodyParser.json());
@@ -35,17 +30,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(passport.initialize());
 
-
-
+require("./server/controllers/passport");
+require("./server/routes/users.routes")(app);
 app.use(express.static("./dist/client"));
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname + "/dist/client/index.html")); // Cannot use render for html unlike pug etc
 });
 app.listen(process.env.PORT || 3000);
-
-
-app.use(function(req, res, next) {
-	var err = new Error('Not Found');
-	err.status = 404;
-	next(err);
-});

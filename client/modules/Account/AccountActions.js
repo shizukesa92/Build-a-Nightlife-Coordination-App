@@ -1,3 +1,13 @@
+import {
+	store
+} from '../../store';
+import {
+	getSearchList
+} from "../Search/SearchActions";
+import {
+	updateRsvps
+} from '../Activities/ActivityActions';
+
 export const changeActionType = () => ({
 	type: 'CHANGE_ACTION_TYPE'
 })
@@ -33,6 +43,24 @@ export const accountRequestFailure = ({
 	actionType
 })
 
+export const sendAccountRequest = ({
+	username,
+	password,
+	actionType
+}) => (
+	fetch('/account', {
+		method: 'post',
+		body: JSON.stringify({
+			username,
+			password,
+			actionType
+		}),
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		}
+	}).then(res => res.json())
+)
 export const submitAccountRequest = ({
 	username,
 	password,
@@ -71,28 +99,3 @@ export const submitAccountRequest = ({
 			})
 	}
 }
-
-export const toggleRsvp = (id, info) => ({
-	type: 'TOGGLE_RSVP',
-	id,
-	info
-})
-
-export const sendAccountRequest = ({
-	username,
-	password,
-	actionType
-}) => (
-	fetch('/account', {
-		method: 'post',
-		body: JSON.stringify({
-			username,
-			password,
-			actionType
-		}),
-		headers: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		}
-	}).then(res => res.json())
-)

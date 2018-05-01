@@ -1,5 +1,5 @@
-let jwt = require('jsonwebtoken');
-let secretKey = process.env.SECRET_KEY;
+const jwt = require('jsonwebtoken');
+const secretKey = process.env.SECRET_KEY;
 
 exports.getToken = function(user) {
 	return jwt.sign(user, secretKey, {
@@ -8,10 +8,8 @@ exports.getToken = function(user) {
 };
 
 exports.verifyUser = function(req, res, next) {
-	// check and aquire token from request
 	var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
-	// decode token
 	if (token) {
 		jwt.verify(token, secretKey, function(err, decoded) {
 			if (err) {
@@ -19,23 +17,13 @@ exports.verifyUser = function(req, res, next) {
 				err.status = 401;
 				return next(err);
 			} else {
-				// this will load a new property named decoded to the request object
 				req.decoded = decoded;
 				next();
 			}
 		});
 	} else {
-		// if there is no token, return an error
 		var err = new Error('No token provided!');
 		err.status = 403;
 		return next(err);
 	}
 };
-
-const passport = require("passport");
-const LocalStrategy = require("passport-local").Strategy;
-const Users = require("./models/users");
-
-exports.local = passport.use(new LocalStrategy(Users.authenticate()));
-passport.serializeUser(Users.serializeUser());
-passport.deserializeUser(Users.deserializeUser());

@@ -34,21 +34,6 @@ export const formatSearchList = (searchList, rsvps = []) => {
 	})
 	return searchListDisplay;
 }
-
-export const fetchSearchList = (city, sortBy) => {
-	return dispatch => {
-		dispatch(searchRequest(city, sortBy));
-		getSearchList(city, sortBy)
-			.then(searchResult => {
-				if (searchResult.error) {
-					dispatch(searchFailure(searchResult.error.description));
-				} else {
-					dispatch(searchSuccess(searchResult.businesses));
-				}
-			})
-	}
-}
-
 export const getSearchList = (location, sortBy) => (
 	fetch('/nightlife', {
 		method: 'post',
@@ -62,3 +47,16 @@ export const getSearchList = (location, sortBy) => (
 		}
 	}).then(res => res.json())
 )
+export const fetchSearchList = (city, sortBy) => {
+	return dispatch => {
+		dispatch(searchRequest(city, sortBy));
+		getSearchList(city, sortBy)
+			.then(searchResult => {
+				if (searchResult.error) {
+					dispatch(searchFailure(searchResult.error.description));
+				} else {
+					dispatch(searchSuccess(searchResult.businesses));
+				}
+			})
+	}
+}

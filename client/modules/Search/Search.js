@@ -8,10 +8,16 @@ import {
 	SearchResult
 } from './SearchResult';
 import {
-	formatSearchList
+	formatSearchList,
+	fetchSearchList
 } from './SearchActions';
-
-export default class Search extends React.Component {
+import {
+	toggleAndUpdateRsvp
+} from "../Activities/ActivityActions";
+import {
+	connect
+} from 'react-redux';
+export class Search extends React.Component {
 	static propTypes = {
 		userInfo: PropTypes.object,
 		token: PropTypes.string,
@@ -68,3 +74,19 @@ export default class Search extends React.Component {
 		)
 	}
 }
+
+const mapStateToProps = state => ({
+	...state.search,
+	token: state.account.token,
+	userInfo: state.account.userInfo
+})
+
+const mapDispatchToProps = dispatch => ({
+	getSearchList: (city, sortBy) => dispatch(fetchSearchList(city, sortBy)),
+	toggleRsvpAction: (id, info) => dispatch(toggleAndUpdateRsvp(id, info))
+})
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Search);
