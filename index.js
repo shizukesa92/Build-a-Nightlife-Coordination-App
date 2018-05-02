@@ -35,7 +35,7 @@ const yelpBasePath = "https://api.yelp.com/v3/businesses/search?categories=night
 const fetch = require('node-fetch');
 
 
-app.post('/nightlife', (req, res) => {
+app.post('/api/nightlife', (req, res) => {
 	let {
 		location,
 		sortBy
@@ -50,7 +50,7 @@ app.post('/nightlife', (req, res) => {
 		.then(yelpResp => res.json(yelpResp))
 })
 
-app.put('/rsvps', verify.verifyUser, (req, res) => {
+app.put('/api/rsvps', verify.verifyUser, (req, res) => {
 	let {
 		username,
 		rsvps
@@ -69,7 +69,7 @@ app.put('/rsvps', verify.verifyUser, (req, res) => {
 	})
 })
 
-app.post('/account', (req, res, next) => {
+app.post('/api/account', (req, res, next) => {
 	let {
 		username,
 		password,

@@ -48,7 +48,7 @@ export const sendAccountRequest = ({
 	password,
 	actionType
 }) => (
-	fetch('/account', {
+	fetch('/api/account', {
 		method: 'post',
 		body: JSON.stringify({
 			username,

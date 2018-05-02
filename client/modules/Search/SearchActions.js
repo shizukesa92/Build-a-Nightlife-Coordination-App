@@ -35,7 +35,7 @@ export const formatSearchList = (searchList, rsvps = []) => {
 	return searchListDisplay;
 }
 export const getSearchList = (location, sortBy) => (
-	fetch('/nightlife', {
+	fetch('/api/nightlife', {
 		method: 'post',
 		body: JSON.stringify({
 			location,

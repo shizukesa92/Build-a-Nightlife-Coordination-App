@@ -5,7 +5,7 @@ import {
 
 
 export const updateRsvps = (username, token, rsvps) => (
-	fetch('/rsvps', {
+	fetch('/api/rsvps', {
 		method: 'put',
 		body: JSON.stringify({
 			username,
