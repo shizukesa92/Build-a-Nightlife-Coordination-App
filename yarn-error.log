@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add .
 
 PATH: 
-  C:\tools\cmder\bin;C:\tools\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\tools\cmder\vendor\conemu-maximus5;C:\tools\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Python36\Scripts\;C:\Program Files\Python36\;C:\Users\Owner\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Owner\AppData\Local\Programs\Python\Python36\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES (X86)\AMD APP\BIN\X86_64;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X86;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X64;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\ATI TECHNOLOGIES\ATI.ACE\CORE-STATIC;C:\PROGRAM FILES (X86)\WINDOWS LIVE\SHARED;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Skype\Phone\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Gow\bin;C:\Program Files (x86)\vim\vim80;C:\ProgramData\chocolatey\lib\curl\tools\curl_x64;C:\ProgramData\chocolatey\bin\;C:\Program Files (x86)\Yarn\bin;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Owner\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Owner\AppData\Local\Programs\Python\Python35\;C:\Users\Owner\AppData\Local\Microsoft\WindowsApps\;C:\tools\cmder\;C:\Users\Owner\AppData\Local\GitHubDesktop\bin\;C:\Program Files\CMake\bin\;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\;C:\Users\Owner\AppData\Roaming\npm\;C:\Program Files\MongoDB\Server\3.6\bin\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Heroku\bin;C:\Users\Owner\AppData\Local\GitHubDesktop\bin;C:\Users\Owner\AppData\Roaming\npm;C:\Users\Owner\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;C:\tools\cmder\
+  C:\tools\cmder\vendor\conemu-maximus5\ConEmu\Scripts;C:\tools\cmder\vendor\conemu-maximus5;C:\tools\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Python36\Scripts\;C:\Program Files\Python36\;C:\Users\Owner\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\Owner\AppData\Local\Programs\Python\Python36\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\PROGRAMDATA\ORACLE\JAVA\JAVAPATH;C:\PROGRAM FILES (X86)\AMD APP\BIN\X86_64;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X86;C:\PROGRAM FILES (X86)\INTEL\OPENCL SDK\2.0\BIN\X64;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\ATI TECHNOLOGIES\ATI.ACE\CORE-STATIC;C:\PROGRAM FILES (X86)\WINDOWS LIVE\SHARED;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Skype\Phone\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Gow\bin;C:\Program Files (x86)\vim\vim80;C:\ProgramData\chocolatey\lib\curl\tools\curl_x64;C:\ProgramData\chocolatey\bin\;C:\Program Files (x86)\Yarn\bin;C:\Program Files\MongoDB\Server\3.6\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Owner\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\Owner\AppData\Local\Programs\Python\Python35\;C:\Users\Owner\AppData\Local\Microsoft\WindowsApps\;C:\tools\cmder\;C:\Users\Owner\AppData\Local\GitHubDesktop\bin\;C:\Program Files\CMake\bin\;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\;C:\Users\Owner\AppData\Roaming\npm\;C:\Program Files\MongoDB\Server\3.6\bin\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Heroku\bin;C:\Users\Owner\AppData\Local\GitHubDesktop\bin;C:\Users\Owner\AppData\Roaming\npm;C:\Users\Owner\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\bin;C:\Program Files\Git\usr\bin
 
 Yarn version: 
   1.5.1
@@ -27,12 +27,11 @@ npm manifest:
   		"yarn": "1.5.1"
   	},
   	"scripts": {
-  		"start": "node index.js",
-  		"build": "webpack --env prod --progress --config webpack.config.js",
-  		"dev:client": "webpack-dev-server --mode development --config webpack.config.js",
-  		"dev:server": "nodemon index.js",
-  		"dev": "concurrently \"yarn run dev:server\" \"yarn run dev:client\"",
-  		"postinstall": "webpack --env prod --progress --config webpack.config.js"
+  		"start": "node server/server.js",
+  		"build": "cd client && npm run build && cd ..",
+  		"dev": "nf start -p 3000 createreactapp,devserver",
+  		"devserver": "PORT=3001 nodemon server/server.js --ignore client/ --ignore node_modules/",
+  		"prettier": "prettier --single-quote --trailing-comma es5 --write '**/*.js'"
   	},
   	"dependencies": {
   		"axios": "^0.18.0",
@@ -41,19 +40,26 @@ npm manifest:
   		"bcrypt": "^2.0.1",
   		"body-parser": "^1.18.2",
   		"bootstrap": "^4.0.0",
+  		"chalk": "^2.4.1",
   		"compression": "^1.7.2",
+  		"cookie-parser": "^1.4.3",
   		"cookie-session": "^2.0.0-beta.3",
   		"dotenv": "^5.0.1",
   		"express": "^4.16.3",
+  		"express-session": "^1.15.6",
+  		"foreman": "^2.0.0",
   		"jquery": "^3.3.1",
   		"jsonwebtoken": "^8.2.1",
+  		"moment": "^2.22.1",
   		"mongodb": "^3.0.5",
   		"mongoose": "^5.0.13",
+  		"morgan": "^1.9.0",
   		"passport": "^0.4.0",
   		"passport-local": "^1.0.0",
   		"passport-local-mongoose": "^5.0.0",
   		"react": "^16.3.0",
   		"react-bootstrap": "^0.32.1",
+  		"react-cookie": "^2.1.4",
   		"react-dom": "^16.3.0",
   		"react-redux": "^5.0.7",
   		"react-router": "^4.2.0",
@@ -63,7 +69,9 @@ npm manifest:
   		"redux-batched-actions": "^0.2.1",
   		"redux-form": "^7.3.0",
   		"redux-thunk": "^2.2.0",
-  		"semantic-ui-react": "^0.79.1"
+  		"request": "^2.85.0",
+  		"semantic-ui-react": "^0.79.1",
+  		"yelp-fusion": "^2.0.3"
   	},
   	"devDependencies": {
   		"autoprefixer": "^8.2.0",
@@ -205,6 +213,15 @@ Lockfile:
   "@sindresorhus/is@^0.7.0":
     version "0.7.0"
     resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
+  
+  "@tonybadguy/call-me-maybe@^2.0.1":
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/@tonybadguy/call-me-maybe/-/call-me-maybe-2.0.1.tgz#233267eb0a1625c2f5954f27af364b4a29c6e344"
+    dependencies:
+      caseless "^0.11.0"
+      error "^7.0.2"
+      small-request "^2.0.2"
+      string-template "^1.0.0"
   
   abbrev@1:
     version "1.1.1"
@@ -370,6 +387,10 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/array-differ/-/array-differ-1.0.0.tgz#eff52e3758249d33be402b8bb8e564bb2b5d4031"
   
+  array-filter@~0.0.0:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/array-filter/-/array-filter-0.0.1.tgz#7da8cf2e26628ed732803581fd21f67cacd2eeec"
+  
   array-find-index@^1.0.1:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
@@ -388,6 +409,14 @@ Lockfile:
     dependencies:
       define-properties "^1.1.2"
       es-abstract "^1.7.0"
+  
+  array-map@~0.0.0:
+    version "0.0.0"
+    resolved "https://registry.yarnpkg.com/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
+  
+  array-reduce@~0.0.0:
+    version "0.0.0"
+    resolved "https://registry.yarnpkg.com/array-reduce/-/array-reduce-0.0.0.tgz#173899d3ffd1c7d9383e4479525dbe278cab5f2b"
   
   array-union@^1.0.1:
     version "1.0.2"
@@ -1309,6 +1338,12 @@ Lockfile:
       mixin-deep "^1.2.0"
       pascalcase "^0.1.1"
   
+  basic-auth@~2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.0.tgz#015db3f353e02e56377755f962742e8981e7bbba"
+    dependencies:
+      safe-buffer "5.1.1"
+  
   batch@0.6.1:
     version "0.6.1"
     resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -1652,7 +1687,7 @@ Lockfile:
     version "1.0.30000832"
     resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000832.tgz#22a277f1d623774cc9aea2f7c1a65cb1603c63b8"
   
-  caseless@~0.11.0:
+  caseless@^0.11.0, caseless@~0.11.0:
     version "0.11.0"
     resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.11.0.tgz#715b96ea9841593cc33067923f5ec60ebda4f7d7"
   
@@ -1951,6 +1986,12 @@ Lockfile:
     version "2.13.0"
     resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
   
+  commander@~2.9.0:
+    version "2.9.0"
+    resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
+    dependencies:
+      graceful-readlink ">= 1.0.0"
+  
   commondir@^1.0.1:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
@@ -2037,6 +2078,13 @@ Lockfile:
     version "1.5.1"
     resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
   
+  cookie-parser@^1.4.3:
+    version "1.4.3"
+    resolved "https://registry.yarnpkg.com/cookie-parser/-/cookie-parser-1.4.3.tgz#0fe31fa19d000b95f4aadf1f53fdc2b8a203baa5"
+    dependencies:
+      cookie "0.3.1"
+      cookie-signature "1.0.6"
+  
   cookie-session@^2.0.0-beta.3:
     version "2.0.0-beta.3"
     resolved "https://registry.yarnpkg.com/cookie-session/-/cookie-session-2.0.0-beta.3.tgz#4e446bd9f85bd7e27d3e226f4e99af12011a4386"
@@ -2050,7 +2098,7 @@ Lockfile:
     version "1.0.6"
     resolved "https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.0.6.tgz#e303a882b342cc3ee8ca513a79999734dab3ae2c"
   
-  cookie@0.3.1:
+  cookie@0.3.1, cookie@^0.3.1:
     version "0.3.1"
     resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
   
@@ -2103,6 +2151,10 @@ Lockfile:
       os-homedir "^1.0.1"
       parse-json "^2.2.0"
       require-from-string "^1.1.0"
+  
+  crc@3.4.4:
+    version "3.4.4"
+    resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.4.tgz#9da1e980e3bd44fc5c93bf5ab3da3378d85e466b"
   
   create-ecdh@^4.0.0:
     version "4.0.1"
@@ -3000,6 +3052,10 @@ Lockfile:
     version "1.8.1"
     resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   
+  eventemitter3@1.x.x:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
+  
   eventemitter3@^3.0.0:
     version "3.1.0"
     resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.0.tgz#090b4d6cdbd645ed10bf750d4b5407942d7ba163"
@@ -3066,6 +3122,20 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/expand-tilde/-/expand-tilde-2.0.2.tgz#97e801aa052df02454de46b02bf621642cdc8502"
     dependencies:
       homedir-polyfill "^1.0.1"
+  
+  express-session@^1.15.6:
+    version "1.15.6"
+    resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.15.6.tgz#47b4160c88f42ab70fe8a508e31cbff76757ab0a"
+    dependencies:
+      cookie "0.3.1"
+      cookie-signature "1.0.6"
+      crc "3.4.4"
+      debug "2.6.9"
+      depd "~1.1.1"
+      on-headers "~1.0.1"
+      parseurl "~1.3.2"
+      uid-safe "~2.1.5"
+      utils-merge "1.0.1"
   
   express@^4.16.2, express@^4.16.3:
     version "4.16.3"
@@ -3337,6 +3407,15 @@ Lockfile:
   foreach@^2.0.5:
     version "2.0.5"
     resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
+  
+  foreman@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/foreman/-/foreman-2.0.0.tgz#00acd20f9dbbe2f79d04697bcca2a77ee00ee031"
+    dependencies:
+      commander "~2.9.0"
+      http-proxy "~1.11.1"
+      mustache "^2.2.1"
+      shell-quote "~1.4.2"
   
   forever-agent@~0.6.1:
     version "0.6.1"
@@ -3638,6 +3717,10 @@ Lockfile:
     version "4.1.11"
     resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
   
+  "graceful-readlink@>= 1.0.0":
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
+  
   grouped-queue@^0.3.3:
     version "0.3.3"
     resolved "https://registry.yarnpkg.com/grouped-queue/-/grouped-queue-0.3.3.tgz#c167d2a5319c5a0e0964ef6a25b7c2df8996c85c"
@@ -3805,7 +3888,7 @@ Lockfile:
     version "4.2.1"
     resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
   
-  hoist-non-react-statics@^2.3.0, hoist-non-react-statics@^2.5.0:
+  hoist-non-react-statics@^2.3.0, hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
     version "2.5.0"
     resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
   
@@ -3943,6 +4026,13 @@ Lockfile:
       eventemitter3 "^3.0.0"
       follow-redirects "^1.0.0"
       requires-port "^1.0.0"
+  
+  http-proxy@~1.11.1:
+    version "1.11.3"
+    resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.11.3.tgz#1915dc888751e2a6bf3c2abfcb1808fa86c72353"
+    dependencies:
+      eventemitter3 "1.x.x"
+      requires-port "0.x.x"
   
   http-signature@~1.1.0:
     version "1.1.1"
@@ -4572,6 +4662,10 @@ Lockfile:
     version "0.5.1"
     resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
   
+  jsonify@~0.0.0:
+    version "0.0.0"
+    resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
+  
   jsonpointer@^4.0.0:
     version "4.0.1"
     resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.1.tgz#4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9"
@@ -5184,6 +5278,10 @@ Lockfile:
     dependencies:
       minimist "0.0.8"
   
+  moment@^2.22.1:
+    version "2.22.1"
+    resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
+  
   mongodb-core@3.0.7:
     version "3.0.7"
     resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.0.7.tgz#a9941f14883a75768d554cef5fd67756a9cc0f25"
@@ -5216,6 +5314,16 @@ Lockfile:
       ms "2.0.0"
       regexp-clone "0.0.1"
       sliced "1.0.1"
+  
+  morgan@^1.9.0:
+    version "1.9.0"
+    resolved "https://registry.yarnpkg.com/morgan/-/morgan-1.9.0.tgz#d01fa6c65859b76fcf31b3cb53a3821a311d8051"
+    dependencies:
+      basic-auth "~2.0.0"
+      debug "2.6.9"
+      depd "~1.1.1"
+      on-finished "~2.3.0"
+      on-headers "~1.0.1"
   
   move-concurrently@^1.0.1:
     version "1.0.1"
@@ -5268,6 +5376,10 @@ Lockfile:
       array-union "^1.0.1"
       arrify "^1.0.0"
       minimatch "^3.0.0"
+  
+  mustache@^2.2.1:
+    version "2.3.0"
+    resolved "https://registry.yarnpkg.com/mustache/-/mustache-2.3.0.tgz#4028f7778b17708a489930a6e52ac3bca0da41d0"
   
   mute-stream@0.0.7:
     version "0.0.7"
@@ -6547,7 +6659,7 @@ Lockfile:
     dependencies:
       warning "^3.0.0"
   
-  prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.1:
+  prop-types@^15.0.0, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.0, prop-types@^15.6.1:
     version "15.6.1"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
     dependencies:
@@ -6656,6 +6768,10 @@ Lockfile:
     dependencies:
       performance-now "^2.1.0"
   
+  random-bytes@~1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
+  
   randomatic@^1.1.3:
     version "1.1.7"
     resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -6714,6 +6830,14 @@ Lockfile:
       react-transition-group "^2.0.0"
       uncontrollable "^4.1.0"
       warning "^3.0.0"
+  
+  react-cookie@^2.1.4:
+    version "2.1.4"
+    resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-2.1.4.tgz#7ccb5d2a8e837098c119a0edba8e4a09ac3ffcad"
+    dependencies:
+      hoist-non-react-statics "^2.3.1"
+      prop-types "^15.0.0"
+      universal-cookie "^2.1.2"
   
   react-dom@^16.3.0:
     version "16.3.2"
@@ -7101,7 +7225,13 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-1.0.0.tgz#de63128373fcbf7c3ccfa4de5a480c45a67958eb"
   
-  request@2:
+  request-function@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/request-function/-/request-function-2.0.0.tgz#27aace27f871e3c2fd48a19dad75ca384c4b8654"
+    dependencies:
+      error "^7.0.2"
+  
+  request@2, request@^2.85.0:
     version "2.85.0"
     resolved "https://registry.yarnpkg.com/request/-/request-2.85.0.tgz#5a03615a47c61420b3eb99b7dba204f83603e1fa"
     dependencies:
@@ -7178,6 +7308,10 @@ Lockfile:
     dependencies:
       resolve-from "^2.0.0"
       semver "^5.1.0"
+  
+  requires-port@0.x.x:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-0.0.1.tgz#4b4414411d9df7c855995dd899a8c78a2951c16d"
   
   requires-port@1.0.x, requires-port@^1.0.0:
     version "1.0.0"
@@ -7492,6 +7626,15 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   
+  shell-quote@~1.4.2:
+    version "1.4.3"
+    resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.4.3.tgz#952c44e0b1ed9013ef53958179cc643e8777466b"
+    dependencies:
+      array-filter "~0.0.0"
+      array-map "~0.0.0"
+      array-reduce "~0.0.0"
+      jsonify "~0.0.0"
+  
   shelljs@^0.8.0:
     version "0.8.1"
     resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.8.1.tgz#729e038c413a2254c4078b95ed46e0397154a9f1"
@@ -7535,6 +7678,12 @@ Lockfile:
   slide@^1.1.5:
     version "1.1.6"
     resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
+  
+  small-request@^2.0.2:
+    version "2.0.2"
+    resolved "https://registry.yarnpkg.com/small-request/-/small-request-2.0.2.tgz#a44ba8d86fa2de24c168085268c567f885030653"
+    dependencies:
+      request-function "^2.0.0"
   
   snapdragon-node@^2.0.1:
     version "2.1.1"
@@ -7780,6 +7929,10 @@ Lockfile:
   strict-uri-encode@^1.0.0:
     version "1.1.0"
     resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+  
+  string-template@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/string-template/-/string-template-1.0.0.tgz#9e9f2233dc00f218718ec379a28a5673ecca8b96"
   
   string-template@~0.2.1:
     version "0.2.1"
@@ -8131,6 +8284,12 @@ Lockfile:
       webpack-sources "^1.1.0"
       worker-farm "^1.5.2"
   
+  uid-safe@~2.1.5:
+    version "2.1.5"
+    resolved "https://registry.yarnpkg.com/uid-safe/-/uid-safe-2.1.5.tgz#2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a"
+    dependencies:
+      random-bytes "~1.0.0"
+  
   uncontrollable@^4.1.0:
     version "4.1.0"
     resolved "https://registry.yarnpkg.com/uncontrollable/-/uncontrollable-4.1.0.tgz#e0358291252e1865222d90939b19f2f49f81c1a9"
@@ -8175,6 +8334,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/unique-slug/-/unique-slug-2.0.0.tgz#db6676e7c7cc0629878ff196097c78855ae9f4ab"
     dependencies:
       imurmurhash "^0.1.4"
+  
+  universal-cookie@^2.1.2:
+    version "2.1.2"
+    resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-2.1.2.tgz#7c0824c0e027f572789538932f066315611c2836"
+    dependencies:
+      cookie "^0.3.1"
+      object-assign "^4.1.0"
   
   unpipe@1.0.0, unpipe@~1.0.0:
     version "1.0.0"
@@ -8683,6 +8849,12 @@ Lockfile:
     dependencies:
       minimist "^0.1.0"
   
+  yelp-fusion@^2.0.3:
+    version "2.0.3"
+    resolved "https://registry.yarnpkg.com/yelp-fusion/-/yelp-fusion-2.0.3.tgz#701ef2c902eac8cf4b2ba53dd952a70d878244f8"
+    dependencies:
+      "@tonybadguy/call-me-maybe" "^2.0.1"
+  
   yeoman-environment@^2.0.0, yeoman-environment@^2.0.5:
     version "2.0.6"
     resolved "https://registry.yarnpkg.com/yeoman-environment/-/yeoman-environment-2.0.6.tgz#ae1b21d826b363f3d637f88a7fc9ea7414cb5377"
@@ -8732,16 +8904,14 @@ Lockfile:
       yeoman-environment "^2.0.5"
 
 Trace: 
-  Error: Command failed.
-  Exit code: 3221225786
-  Command: C:\WINDOWS\system32\cmd.exe
-  Arguments: /d /s /c concurrently "yarn run dev:server" "yarn run dev:client"
-  Directory: D:\Dropbox\Repositories\Build-a-Nightlife-Coordination-App
-  Output:
-  
-      at ProcessTermError.MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
-      at new ProcessTermError (C:\Program Files (x86)\Yarn\lib\cli.js:226:113)
-      at ChildProcess.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:30281:17)
-      at ChildProcess.emit (events.js:182:13)
-      at maybeClose (internal/child_process.js:947:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:236:5)
+  Error: Received malformed response from registry for undefined. The registry may be down.
+      at new MessageError (C:\Program Files (x86)\Yarn\lib\cli.js:186:110)
+      at Function.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:51419:15)
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:98:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (C:\Program Files (x86)\Yarn\lib\cli.js:23451:28)
+      at Function.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:95:12)
+      at Function.findVersionInRegistryResponse (C:\Program Files (x86)\Yarn\lib\cli.js:51461:19)
+      at NpmResolver.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:51479:28)

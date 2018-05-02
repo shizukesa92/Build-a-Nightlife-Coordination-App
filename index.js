@@ -1,154 +1,114 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cookieSession = require('cookie-session');
-const bodyParser = require('body-parser');
-const path = require('path');
-const app = express();
-const passport = require('passport');
+// Module dependencies.
+var express = require('express');
+var logger = require('morgan');
+var compression = require('compression');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var chalk = require('chalk');
+var dotenv = require('dotenv');
+var path = require('path');
+var mongoose = require('mongoose');
+var jwt = require('jsonwebtoken');
 
-const cookieKey = process.env.COOKIE_KEY;
-app.use(
-	cookieSession({
-		maxAge: 24 * 60 * 60 * 1000,
-		keys: [cookieKey]
-	})
-);
+// Load environment variables from .env file.
+dotenv.load();
 
-const dotenv = require("dotenv").config({
-	path: "./.env"
+// Models
+var User = require('./server/models/User');
+var Venue = require('./server/models/Venue');
+
+// Controllers (route handlers).
+var userController = require('./server/controllers/user');
+var routeController = require('./server/controllers/route');
+var venueController = require('./server/controllers/venue');
+
+// Create Express server.
+var app = express();
+
+// Connect to MongoDB.
+mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connection.on('connected', function() {
+	console.log('%s MongoDB connection established!', chalk.green('✓'));
 });
+mongoose.connection.on('error', function() {
+	console.log(
+		'%s MongoDB connection error. Please make sure MongoDB is running.',
+		chalk.red('✗')
+	);
+	process.exit();
+});
+mongoose.Promise = global.Promise;
 
-const uri = process.env.MONGOLAB_URI;
-mongoose.connect(uri);
-
-
-
-
+// Express configuration.
+app.set('port', process.env.PORT || 3000);
+app.use(compression());
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: true
+	extended: false
 }));
-app.use(passport.initialize());
-const verify = require('./server/controllers/users.controller');
-const Users = require('./server/models/users');
-const yelpBasePath = "https://api.yelp.com/v3/businesses/search?categories=nightlife";
-const fetch = require('node-fetch');
+app.use(cookieParser());
 
+app.use(function(req, res, next) {
+	req.isAuthenticated = function() {
+		var token =
+			(req.headers.authorization && req.headers.authorization.split(' ')[1]) ||
+			req.cookies.token;
+		try {
+			return jwt.verify(token, process.env.TOKEN_SECRET);
+		} catch (err) {
+			return false;
+		}
+	};
 
-app.post('/api/nightlife', (req, res) => {
-	let {
-		location,
-		sortBy
-	} = req.body;
-	let url = `${yelpBasePath}&location=${location}&sort_by=${sortBy}`;
-	fetch(url, {
-			headers: {
-				'Authorization': process.env.YELP_TOKEN,
-				'Accept': 'application/json'
-			}
-		}).then(res => res.json())
-		.then(yelpResp => res.json(yelpResp))
-})
-
-app.put('/api/rsvps', verify.verifyUser, (req, res) => {
-	let {
-		username,
-		rsvps
-	} = req.body;
-	Users.findOneAndUpdate({
-		username
-	}, {
-		rsvps
-	}, (err, user) => {
-		if (err) res.json({
-			message: 'failed to update rsvps'
-		})
-		res.json({
-			message: 'successfully updated rsvps'
-		})
-	})
-})
-
-app.post('/api/account', (req, res, next) => {
-	let {
-		username,
-		password,
-		actionType
-	} = req.body;
-	switch (actionType) {
-		case 'signup':
-			Users.register(new Users({
-				username
-			}), password, (err, user) => {
-				if (err) {
-					return res.status(500).json({
-						error: err.message
-					});
-				}
-				user.save((err, user) => {
-					passport.authenticate('local')(req, res, () => {
-						let token = verify.getToken(user);
-
-						res.status(200).json({
-							message: 'Signup and login Successfully',
-							success: true,
-							token,
-							userInfo: {
-								username: user.username,
-								rsvps: user.rsvps
-							}
-						});
-					});
-				});
-			});
-			break;
-		case 'login':
-			passport.authenticate('local', (err, user, info) => {
-				if (err) {
-					return next(err);
-				}
-				if (!user) {
-					return res.status(401).json({
-						error: 'Incorrect username or password'
-					})
-				}
-				req.logIn(user, err => {
-					if (err) {
-						return res.status(500).json({
-							error: 'Could not log in user'
-						});
-					}
-					let token = verify.getToken(user);
-
-					res.status(200).json({
-						message: 'Login Successfully',
-						success: true,
-						token,
-						userInfo: {
-							username: user.username,
-							rsvps: user.rsvps
-						}
-					});
-				});
-			})(req, res, next);
-			break;
-		case 'logout':
-			req.logout();
-			res.status(200).json({
-				message: 'Logout Successfully!'
-			});
-			break;
-		default:
-			res.json({
-				error: 'unrecognized action'
-			})
+	if (req.isAuthenticated()) {
+		var payload = req.isAuthenticated();
+		User.findById(payload.sub, function(err, user) {
+			req.user = user;
+			next();
+		});
+	} else {
+		next();
 	}
-})
-
-
-require("./server/controllers/passport");
-app.use(express.static("./dist/client"));
-app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname + "/dist/client/index.html")); // Cannot use render for html unlike pug etc
 });
-app.listen(process.env.PORT || 3000);
+
+app.use(express.static("./dist/client"));
+
+// Primary app routes.
+app.get(['/', '/login'], routeController.index);
+
+// OAuth authentication routes.
+app.post('/auth/github', userController.authGithub);
+app.get('/auth/github/callback', userController.authGithubCallback);
+
+// API routes.
+app.get('/api/profile', userController.getProfile);
+app.get('/api/venues', venueController.getVenues);
+app.post(
+	'/api/rsvp',
+	userController.ensureAuthenticated,
+	venueController.postRsvp
+);
+app.delete(
+	'/api/rsvp',
+	userController.ensureAuthenticated,
+	venueController.deleteRsvps
+);
+
+// Production error handler
+if (app.get('env') === 'production') {
+	app.use(function(err, req, res, next) {
+		console.error(err.stack);
+		res.sendStatus(err.status || 500);
+	});
+}
+
+// Start Express server.
+app.listen(app.get('port'), function() {
+	console.log(
+		'%s Express server listening on port %d in %s mode.',
+		chalk.green('✓'),
+		app.get('port'),
+		app.get('env')
+	);
+});
