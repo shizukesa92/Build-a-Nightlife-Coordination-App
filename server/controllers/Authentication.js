@@ -1,8 +1,8 @@
 const jwt = require('jwt-simple');
-const User = require('../models/user'); // Mongoose model
+const User = require('../models/User'); // Mongoose model
 
 const dotenv = require("dotenv").config({
-	path: "./.env"
+	path: "../../.env"
 });
 
 function tokenForUser(user) {
