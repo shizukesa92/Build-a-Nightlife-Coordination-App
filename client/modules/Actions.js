@@ -13,7 +13,7 @@ export const DATA_ERROR = 'data_error';
 export const REDIRECT_LOGIN = 'redirect_login';
 
 
-const ROOT_URL = 'http://127.0.0.1:3000';
+const ROOT_URL = process.env.HEROKU || 'http://127.0.0.1:3000';
 
 export function signinUser({
 	email,
