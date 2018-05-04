@@ -7,11 +7,7 @@ import {
 	createStore,
 	applyMiddleware
 } from 'redux';
-import {
-	Route,
-	BrowserRouter,
-	Switch
-} from 'react-router-dom';
+
 import reduxThunk from 'redux-thunk';
 
 import App from './App';

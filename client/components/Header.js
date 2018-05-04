@@ -9,7 +9,7 @@ import {
 	connect
 } from "react-redux";
 
-export default class Header extends Component {
+class Header extends Component {
 	renderLinks() {
 		if (this.props.authenticated) {
 			return (
@@ -38,3 +38,11 @@ export default class Header extends Component {
 		);
 	}
 }
+
+function mapStateToProps(state) {
+	return {
+		authenticated: state.auth.authenticated
+	};
+}
+
+export default connect(mapStateToProps)(Header);

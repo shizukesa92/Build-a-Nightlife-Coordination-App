@@ -13,18 +13,17 @@ const dotenv = require("dotenv").config({
 const uri = process.env.MONGOLAB_URI;
 mongoose.connect(uri);
 
-const router = require('./server/routes/Routes.js');
-router(app);
+const router = require('./server/routes/Routes');
 
 
-app.use(bodyParser.urlencoded({
-	extended: true
-}));
+
 app.use(morgan('combined'));
 app.use(cors());
 app.use(bodyParser.json({
 	type: '*/*'
 }));
+router(app);
 
+const server = http.createServer(app);
 
-app.listen(process.env.PORT || 3000);
+server.listen(process.env.PORT || 3000);

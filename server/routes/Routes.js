@@ -33,10 +33,9 @@ module.exports = function(app) {
 	app.post('/remove-bar', requireAuth, APIOperations.removeBar); // indicate that we are no longer going to a bar
 	app.get('/search-bars', optionalAuth, APIOperations.searchBars); // search for bars, with optional authentication
 	app.get('/bars-user-data', optionalAuth, APIOperations.barsUserData); // get user data for the bars that have already been searched for, with optional authentication
-
-	app.use(express.static("../../dist/client"));
-	const path = require('path');
-	app.get("/", (req, res) => {
-		res.sendFile(path.join("../../dist/client/index.html")); // Cannot use render for html unlike pug etc
+	app.use('/', express.static("../../dist/client"));
+	const path = require("path");
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve("../../dist/client/index.html")); // Cannot use render for html unlike pug etc
 	});
 }

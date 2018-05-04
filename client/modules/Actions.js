@@ -31,7 +31,7 @@ export function signinUser({
 
 				// - Update state to indicate user is authenticated
 				dispatch({
-					type: types.AUTH_USER
+					type: AUTH_USER
 				});
 
 				// - Save the JWT token
@@ -61,7 +61,7 @@ export function signupUser({
 			})
 			.then(response => {
 				dispatch({
-					type: types.AUTH_USER
+					type: AUTH_USER
 				});
 				localStorage.setItem('token', response.data.token);
 				history.push('/');
@@ -75,7 +75,7 @@ export function signupUser({
 
 export function authError(error) {
 	return {
-		type: types.AUTH_ERROR,
+		type: AUTH_ERROR,
 		payload: error
 	};
 }
@@ -85,14 +85,14 @@ export function signoutUser() {
 	localStorage.removeItem('token');
 
 	return {
-		type: types.DEAUTH_USER
+		type: DEAUTH_USER
 	};
 }
 
 
 export function clearError() {
 	return {
-		type: types.CLEAR_ERROR
+		type: CLEAR_ERROR
 	};
 }
 
@@ -109,7 +109,7 @@ export function searchBars(location) {
 			})
 			.then(response => {
 				dispatch({
-					type: types.SEARCH_BARS,
+					type: SEARCH_BARS,
 					payload: _.pick(response.data, ['barSearchData', 'userData'])
 				});
 			})
@@ -132,7 +132,7 @@ export function getUserData(yelpIdString) {
 			})
 			.then(response => {
 				dispatch({
-					type: types.GET_USER_DATA,
+					type: GET_USER_DATA,
 					payload: response.data.userData
 				});
 			})
@@ -144,7 +144,7 @@ export function getUserData(yelpIdString) {
 
 export function clearSearch() {
 	return {
-		type: types.CLEAR_SEARCH
+		type: CLEAR_SEARCH
 	};
 }
 
@@ -157,7 +157,7 @@ export function addBar({
 		// if not logged in, then redirect to the route '/signin'
 		history.push('/signin');
 		return {
-			type: types.REDIRECT_LOGIN
+			type: REDIRECT_LOGIN
 		};
 	}
 
@@ -172,7 +172,7 @@ export function addBar({
 			})
 			.then(response => {
 				dispatch({
-					type: types.ADD_BAR,
+					type: ADD_BAR,
 					payload: {
 						updatedBar: response.data.updatedBar,
 						id
@@ -194,7 +194,7 @@ export function removeBar({
 		// if not logged in, then redirect to the route '/signin'
 		history.push('/signin');
 		return {
-			type: types.REDIRECT_LOGIN
+			type: REDIRECT_LOGIN
 		};
 	}
 
@@ -209,7 +209,7 @@ export function removeBar({
 			})
 			.then(response => {
 				dispatch({
-					type: types.REMOVE_BAR,
+					type: REMOVE_BAR,
 					payload: {
 						updatedBar: response.data.updatedBar,
 						id,
@@ -226,7 +226,7 @@ export function removeBar({
 
 export function dataError(error) {
 	return {
-		type: types.DATA_ERROR,
+		type: DATA_ERROR,
 		payload: error
 	};
 }

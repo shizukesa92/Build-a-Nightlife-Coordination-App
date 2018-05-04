@@ -1,9 +1,9 @@
 const yelp = require('yelp-fusion');
 const yelpClient = yelp.client(process.env.YELP_TOKEN);
 const _ = require('lodash');
-const Bar = require('../models/bar'); // Mongoose model
+const Bar = require('../models/Bar'); // Mongoose model
 const dotenv = require("dotenv").config({
-	path: "./.env"
+	path: "../../.env"
 });
 
 // indicate that we are going to a bar
